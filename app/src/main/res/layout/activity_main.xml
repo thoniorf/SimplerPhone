@@ -6,21 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".DialerActivity">
 
-    <TextView
-        android:id="@+id/phoneNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:maxLength="15"
-        android:text="00393403524681"
-        android:textSize="20sp"
-        android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/callBtn"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="00393403524681" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/callBtn"
         style="@android:style/Widget.DeviceDefault.ImageButton"
@@ -38,6 +23,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_call_24" />
+
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/callBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@android:string/emptyPhoneNumber"
+        android:autofillHints="" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

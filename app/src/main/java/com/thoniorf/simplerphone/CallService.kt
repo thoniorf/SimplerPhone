@@ -14,8 +14,9 @@ class CallService : InCallService() {
         if (call != null) {
             runBlocking { launch { Ongoingcall.produceCall(call) } }
 
-            startActivity(Intent())
-            Intent(this, CallActivity::class.java).setData(call.details.handle)
+
+            Intent(this, CallActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .setData(call.details.handle)
                 .let(this::startActivity)
         };
     }

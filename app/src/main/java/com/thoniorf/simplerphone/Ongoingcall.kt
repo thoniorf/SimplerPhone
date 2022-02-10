@@ -1,9 +1,7 @@
 package com.thoniorf.simplerphone
 
-import android.os.Build
 import android.telecom.Call
 import android.telecom.VideoProfile
-import androidx.annotation.RequiresApi
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 
